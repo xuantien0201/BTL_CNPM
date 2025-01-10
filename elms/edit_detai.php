@@ -164,8 +164,9 @@ if (isset($_POST['update'])) {
     </div>
 </div>
                             <div class="row">
-                                <div class="input-field col s6">
-                                    <input id="GiangVien" name="GiangVien" type="text" value="<?= htmlentities($result->GiangVien) ?>" required>
+                                 <div class="input-field col s6">
+                                    <input id="GiangVien" name="GiangVien" type="hidden" value="<?= htmlentities($result->GiangVien) ?>">
+                                    <input id="GiangVien" name="GiangVien" type="text" value="<?= htmlentities($result->GiangVien . ' - ' . $result->tengiangvien)  ?>" disabled>
                                     <label for="GiangVien">Giảng Viên</label>
                                 </div>
                                 <div class="input-field col s6">
